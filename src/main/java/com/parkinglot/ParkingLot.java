@@ -10,7 +10,7 @@ public class ParkingLot {
     public ParkingTicket park(Car car) {
 
         if (FULL_CAPACITY == parkedCars.size()) {
-            return null;
+            throw new NoAvailablePositionException();
         }
 
         ParkingTicket parkingTicket = new ParkingTicket();
