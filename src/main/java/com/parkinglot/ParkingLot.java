@@ -18,7 +18,7 @@ public class ParkingLot {
         return parkingTicket;
     }
 
-    public Car fetch(ParkingTicket parkingTicket) throws Exception {
+    public Car fetch(ParkingTicket parkingTicket) {
 
         if (!parkedCars.containsKey(parkingTicket)) {
             throw new UnrecognizedParkingTicketException();
