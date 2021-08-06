@@ -36,12 +36,12 @@ Given a parking lot, and a wrong ticket
 When fetch the car  
 Then return no car and error message "Unrecognized parking ticket".
 
-[X] Case2 
+[] Case2 
 Given a parking lot, and a used ticket
 When fetch the car  
 Then return no car and error message "Unrecognized parking ticket".
 
-[X] Case3
+[] Case3
 Given a full parking lot, and a car
 When park the car
 then return error message "No available position"
