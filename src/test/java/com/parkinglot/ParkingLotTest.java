@@ -101,4 +101,19 @@ public class ParkingLotTest {
         Exception exception = assertThrows(Exception.class, () -> parkingLot.fetch(bossKanenTicket));
         assertTrue(exception.getMessage().contains("Unrecognized parking ticket"));
     }
+
+    @Test
+    public void should_throw_error_message_No_available_position_when_park_the_car_given_a_parking_lot_and_a_car() {
+
+        //given
+        ParkingLot parkingLot = new ParkingLot();
+
+        for (int i = 0; i < 10; i++) {
+            parkingLot.park(new Car());
+        }
+
+        //when & then
+        Exception exception = assertThrows(Exception.class, () -> parkingLot.park(new Car()));
+        assertTrue(exception.getMessage().contains("No available position"));
+    }
 }
