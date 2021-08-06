@@ -24,23 +24,24 @@ Given a parking lot, used ticket
 When fetch the car
 then return no car
 
-[] Case6
+[X] Case6
 Given a full parking lot, and a car
 When park the car
 then return no ticket.
 
 
+# story 2
+[X] Case1  
+Given a parking lot, and a wrong ticket
+When fetch the car  
+Then return no car and error message "Unrecognized parking ticket".
 
+[X] Case2 
+Given a parking lot, and a used ticket
+When fetch the car  
+Then return no car and error message "Unrecognized parking ticket".
 
-
-
-[] Case7
-Given a parking lot, and null car
+[X] Case3
+Given a full parking lot, and a car
 When park the car
-should return exception ("You have no car")
-
-[] Case8
-Given a parking lot, and parked car
-When park the car
-should return exception ("Car is already parked")
-
+then return error message "No available position"
