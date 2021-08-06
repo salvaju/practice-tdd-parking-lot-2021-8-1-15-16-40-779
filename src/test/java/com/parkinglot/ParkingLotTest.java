@@ -54,7 +54,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void should_return_nothing_when_fetch_the_car_given_a_wrong_parking_ticket() {
+    public void should_return_nothing_when_fetch_the_car_given_a_wrong_parking_ticket_and_a_parking_lot() {
         //given
         ParkingLot parkingLot = new ParkingLot();
         Car car = new Car();
@@ -69,7 +69,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void should_return_nothing_when_park_the_car_given_a_parkinglot_and_used_parking_ticket() {
+    public void should_return_nothing_when_park_the_car_given_a_parkinglot_and_used_parking_ticket_and_a_parking_lot() {
         //given
         ParkingLot parkingLot = new ParkingLot();
         Car car = new Car();

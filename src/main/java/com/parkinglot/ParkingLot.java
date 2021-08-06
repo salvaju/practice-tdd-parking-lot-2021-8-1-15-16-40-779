@@ -4,11 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ParkingLot {
-    private Map<ParkingTicket, Car> parkedCars = new HashMap<>();
+    public static final int FULL_CAPACITY = 10;
+    private final Map<ParkingTicket, Car> parkedCars = new HashMap<>();
 
     public ParkingTicket park(Car car) {
 
-        if (parkedCars.size() == 10) {
+        if (FULL_CAPACITY == parkedCars.size()) {
             return null;
         }
 
