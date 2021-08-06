@@ -19,7 +19,7 @@ Given a parking lot, and a wrong ticket
 When fetch the car
 then return no car
 
-[] Case5
+[X] Case5
 Given a parking lot, used ticket
 When fetch the car
 then return no car

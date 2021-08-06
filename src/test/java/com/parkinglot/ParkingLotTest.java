@@ -69,7 +69,7 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void should_return_nothing_when_fetch_the_car_given_a_used_parking_ticket() {
+    public void should_return_nothing_when_park_the_car_given_a_full_parkingLot_and_a_car() {
         //given
         ParkingLot parkingLot = new ParkingLot();
         Car car = new Car();
@@ -82,6 +82,27 @@ public class ParkingLotTest {
 
         //then
         assertNull(secondCar);
+    }
+
+    @Test
+    public void should_return_nothing_when_fetch_the_car_given_a_used_parking_ticket() {
+        //given
+        ParkingLot parkingLot = new ParkingLot();
+
+        Car car = new Car();
+        for (int i = 0; i < 10; i++) {
+            ParkingTicket firstParkingTicket = parkingLot.park(car);
+        }
+
+        Car cocoCar = new Car();
+
+        //when
+        ParkingTicket CocoParkingTicket = parkingLot.park(cocoCar);
+
+
+        //then
+        assertNull(CocoParkingTicket);
+
     }
 
 }
