@@ -151,27 +151,27 @@ Given a super smart parking boy, two parking lots with available position, and a
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[X] Case2
+[] Case2
 Given a super smart parking boy, two parking lots and first parking lot has larger available position rate than second parking lot, and a car
 When super smart parking boy parks the car  
 Then the car will be parked to the second parking lot.
 
-[X] Case3
+[] Case3
 Given a smart parking boy, two parking lots and second parking lot has larger available position than first parking lot, and a car
 When smart parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[X] Case4
+[] Case4
 Given a super smart parking boy, two parking lots and an unrecognized ticket
 When super smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[X] Case5
+[] Case5
 Given a super smart parking boy, two parking lots and a used ticket
 When super smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[X] Case6
+[] Case6
 Given a super smart parking boy, two parking lots both without any position and a car
 When super smart Parking boy parks the car
 then return error message "No available position"
