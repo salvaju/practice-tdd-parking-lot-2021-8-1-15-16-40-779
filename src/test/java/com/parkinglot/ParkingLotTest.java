@@ -330,4 +330,25 @@ public class ParkingLotTest {
         assertTrue(smartParkingBoy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
     }
 
+    @Test
+    public void should_car_park_to_the_first_parking_lot_when_parking_boy_parks_the_car_given_a_parking_boy_with_two_parking_lots_but_the_second_has_less_available_position_than_the_first_and_a_car() {
+        //given
+        List<ParkingLot> parkingLots = new ArrayList<>();
+        parkingLots.add(new ParkingLot(2));
+        parkingLots.add(new ParkingLot(2));
+
+        SmartParkingBoy smartParkingBoy = new SmartParkingBoy(parkingLots);
+        smartParkingBoy.park(new Car());
+        smartParkingBoy.park(new Car());
+
+        Car secondCar = new Car();
+
+        //when
+        ParkingTicket secondParkingTicket = smartParkingBoy.park(secondCar);
+
+        //then
+        assertTrue(smartParkingBoy.isParkedOnParkingLotNumber(secondParkingTicket, 1));
+        assertFalse(smartParkingBoy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
+    }
+
 }
