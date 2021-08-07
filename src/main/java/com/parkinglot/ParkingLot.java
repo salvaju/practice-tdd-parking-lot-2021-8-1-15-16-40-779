@@ -50,4 +50,8 @@ public class ParkingLot {
     public Map<ParkingTicket, Car> getParkedCars() {
         return parkedCars;
     }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }
