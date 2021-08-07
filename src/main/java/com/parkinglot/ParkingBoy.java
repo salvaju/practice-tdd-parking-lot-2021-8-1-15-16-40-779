@@ -22,6 +22,7 @@ public class ParkingBoy {
         }
 
         return parkingLot.park(car);
+
     }
 
     public Car fetch(ParkingTicket parkingTicket) {
@@ -29,6 +30,6 @@ public class ParkingBoy {
     }
 
     public boolean isParkedOnFirstParkingLot(ParkingTicket parkingTicket) {
-        return false;
+        return parkingLots.get(0).isRecognizedParkingTicket(parkingTicket);
     }
 }

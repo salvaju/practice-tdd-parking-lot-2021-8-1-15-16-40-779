@@ -43,7 +43,7 @@ public class ParkingLot {
         return capacity == parkedCars.size();
     }
 
-    private boolean isRecognizedParkingTicket(ParkingTicket parkingTicket) {
+    public boolean isRecognizedParkingTicket(ParkingTicket parkingTicket) {
         return parkedCars.containsKey(parkingTicket);
     }
 }
