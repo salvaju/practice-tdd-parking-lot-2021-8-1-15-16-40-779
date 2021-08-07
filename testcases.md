@@ -111,7 +111,7 @@ then return error message "No available position"
 
 # story 5
 [] Case1  
-Given a smart parking boy, two parking lots with available position and a car
+Given a smart parking boy, two parking lots with available position, and a car
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
@@ -126,16 +126,16 @@ When smart parking boy parks the car
 Then the car will be parked to the first parking lot.
 
 [] Case4
-Given a smart parkingboy, two parking lots and an unrecognized ticket
+Given a smart parking boy, two parking lots and an unrecognized ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
 [] Case5
-Given a smart parkingboy, two parking lots and a used ticket
+Given a smart parking boy, two parking lots and a used ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
 [] Case6
-Given a smart parkingboy, two parking lots both without any position and a car
+Given a smart parking boy, two parking lots both without any position and a car
 When smart Parking boy parks the car
 then return error message "No available position"
