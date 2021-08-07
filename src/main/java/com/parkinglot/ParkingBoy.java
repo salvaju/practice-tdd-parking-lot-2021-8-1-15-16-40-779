@@ -19,11 +19,11 @@ public class ParkingBoy {
 
         if (parkingLots != null){
 
-            if (parkingLots.get(0).isFullCapacity()){
-                return parkingLots.get(0).park(car);
-            } else {
-                return parkingLots.get(1).park(car);
-            }
+           return parkingLots.stream()
+                    .filter(parkingLot -> !parkingLot.isFullCapacity())
+                    .map(parkingLot -> parkingLot.park(car))
+                    .findAny()
+                    .orElse(null);
         }
 
         return parkingLot.park(car);
