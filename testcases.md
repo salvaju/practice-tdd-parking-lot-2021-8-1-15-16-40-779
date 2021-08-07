@@ -53,7 +53,7 @@ Given a parking lot, and a car
 When Parking boy parks the car  
 Then return a parking ticket.
 
-[] Case2
+[X] Case2
 Given a parking lot, and a ticket
 When Parking boy fetches the car
 then return a car.
