@@ -141,4 +141,15 @@ public class ParkingLotTest {
         assertEquals(guraCar, actualGuraCar);
     }
 
+    @Test
+    public void should_throw_error_message_Unrecognized_parking_ticket_when_parking_boy_fetches_the_car_given_a_wrong_parking_ticket_and_a_parking_lot() {
+        //given
+        ParkingBoy parkingboy = new ParkingBoy(new ParkingLot());
+        ParkingTicket wrongParkingTicket = new ParkingTicket();
+
+        //when & then
+        Exception exception = assertThrows(Exception.class, () -> parkingboy.fetch(wrongParkingTicket));
+        assertTrue(exception.getMessage().contains("Unrecognized parking ticket"));
+    }
+
 }
