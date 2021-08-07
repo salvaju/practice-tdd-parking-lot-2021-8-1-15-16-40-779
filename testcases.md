@@ -68,7 +68,7 @@ Given a parking lot, and a wrong ticket
 When Parking boy fetches the car  
 Then return no car and error message "Unrecognized parking ticket".
 
-[] Case5
+[X] Case5
 Given a parking lot, and a used ticket
 When Parking boy fetches the car  
 Then return no car and error message "Unrecognized parking ticket".
