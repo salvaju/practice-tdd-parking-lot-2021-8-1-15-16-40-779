@@ -120,22 +120,27 @@ Given a smart parking boy, two parking lots and first parking lot has less avail
 When smart parking boy parks the car  
 Then the car will be parked to the second parking lot.
 
-[] Case3
+[X] Case3
 Given a smart parking boy, two parking lots and second parking lot has less available position than first parking lot, and a car
 When smart parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[] Case4
+[X] Case4
+Given a smart parking boy, two parking lots but both with two parked car and two parking ticket
+When smart Parking boy fetches the car twice
+Then return the right car with each ticket
+
+[] Case5
 Given a smart parking boy, two parking lots and an unrecognized ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[] Case5
+[] Case6
 Given a smart parking boy, two parking lots and a used ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[] Case6
+[] Case7
 Given a smart parking boy, two parking lots both without any position and a car
 When smart Parking boy parks the car
 then return error message "No available position"
