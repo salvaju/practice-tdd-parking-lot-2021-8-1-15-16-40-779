@@ -37,7 +37,7 @@ public class ParkingBoy {
                     .filter(parkingLot -> parkingLot.isRecognizedParkingTicket(parkingTicket))
                     .map(parkingLot -> parkingLot.fetch(parkingTicket))
                     .findAny()
-                    .orElse(null);
+                    .orElseThrow(UnrecognizedParkingTicketException::new);
         }
 
         return parkingLot.fetch(parkingTicket);

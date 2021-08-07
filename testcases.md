@@ -94,7 +94,7 @@ Given a parkingboy, two parking lots but both with two parked car and two parkin
 When Parking boy fetches the car twice 
 Then return the right car with each ticket
 
-[] Case4
+[X] Case4
 Given a parkingboy, two parking lots and an unrecognized ticket
 When Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
