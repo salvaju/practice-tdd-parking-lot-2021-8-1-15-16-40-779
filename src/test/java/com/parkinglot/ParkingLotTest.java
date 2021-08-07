@@ -292,5 +292,22 @@ public class ParkingLotTest {
         assertTrue(exception.getMessage().contains("No available position"));
     }
 
+    @Test
+    public void should_car_park_to_the_first_parking_lot_when_smart_parking_boy_parks_the_car_given_a_smart_parking_boy_with_two_parking_lots_with_available_position_and_a_car() {
+        //given
+        List<ParkingLot> parkingLots = new ArrayList<>();
+        parkingLots.add(new ParkingLot());
+        parkingLots.add(new ParkingLot());
+
+        SmartParkingBoy smartParkingBoy = new SmartParkingBoy(parkingLots);
+        Car car = new Car();
+
+        //when
+        ParkingTicket parkingTicket = smartParkingBoy.park(car);
+
+        //then
+        assertTrue(smartParkingBoy.isParkedOnParkingLotNumber(parkingTicket, 1));
+        assertFalse(smartParkingBoy.isParkedOnParkingLotNumber(parkingTicket, 2));
+    }
 
 }
