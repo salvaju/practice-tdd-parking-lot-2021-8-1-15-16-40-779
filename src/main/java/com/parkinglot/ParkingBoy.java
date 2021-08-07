@@ -33,7 +33,11 @@ public class ParkingBoy {
 
     public Car fetch(ParkingTicket parkingTicket) {
         if (!isParkingLotsNull()) {
-            return null;
+            return parkingLots.stream()
+                    .filter(parkingLot -> parkingLot.isRecognizedParkingTicket(parkingTicket))
+                    .map(parkingLot -> parkingLot.fetch(parkingTicket))
+                    .findAny()
+                    .orElse(null);
         }
 
         return parkingLot.fetch(parkingTicket);
