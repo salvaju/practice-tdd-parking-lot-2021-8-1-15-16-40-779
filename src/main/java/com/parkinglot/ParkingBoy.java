@@ -21,7 +21,7 @@ public class ParkingBoy {
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
                     .map(parkingLot -> parkingLot.park(car))
                     .findAny()
-                    .orElse(null);
+                    .orElseThrow(NoAvailablePositionException::new);
         }
 
         return parkingLot.park(car);
