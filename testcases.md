@@ -48,7 +48,7 @@ then return error message "No available position"
 
 
 # story 3
-[] Case1  
+[X] Case1  
 Given a parking lot, and a car
 When Parking boy parks the car  
 Then return a parking ticket.
