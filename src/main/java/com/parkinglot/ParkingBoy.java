@@ -32,6 +32,10 @@ public class ParkingBoy {
     }
 
     public Car fetch(ParkingTicket parkingTicket) {
+        if (!isParkingLotsNull()) {
+            return null;
+        }
+
         return parkingLot.fetch(parkingTicket);
     }
 

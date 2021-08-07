@@ -89,8 +89,8 @@ Given a parkingboy, two parking lots but the first is full, the second is availa
 When Parking boy parks the car  
 Then the car will be parked to the second parking lot.
 
-[] Case3
-Given a parkingboy, two parking lots but both with a parked car and two parking ticket
+[X] Case3
+Given a parkingboy, two parking lots but both with two parked car and two parking ticket
 When Parking boy fetches the car twice 
 Then return the right car with each ticket
 

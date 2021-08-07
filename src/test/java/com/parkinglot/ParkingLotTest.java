@@ -220,4 +220,30 @@ public class ParkingLotTest {
         assertTrue(parkingboy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
     }
 
+    @Test
+    public void should_return_the_right_car_with_correct_ticket_when_parking_boy_fetches_the_car_twice_given_a_parking_boy_with_two_parking_lots_with_two_parked_cars_on_each_parking_lot_and_two_parking_tickets() {
+        //given
+        List<ParkingLot> parkingLots = new ArrayList<>();
+        parkingLots.add(new ParkingLot(1));
+        parkingLots.add(new ParkingLot());
+
+        ParkingBoy parkingboy = new ParkingBoy(parkingLots);
+
+        Car cocoCar = new Car();
+        Car guraCar = new Car();
+
+        ParkingTicket cocoParkingTicket = parkingboy.park(cocoCar);
+        ParkingTicket guraParkingTicket = parkingboy.park(guraCar);
+
+
+        //when
+        Car cocoActualCar = parkingboy.fetch(cocoParkingTicket);
+        Car guraActualCar = parkingboy.fetch(guraParkingTicket);
+
+        //then
+        assertEquals(cocoCar, cocoActualCar);
+        assertEquals(guraCar, guraActualCar);
+    }
+
+
 }
