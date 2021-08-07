@@ -151,12 +151,12 @@ Given a super smart parking boy, two parking lots with available position, and a
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[] Case2
+[X] Case2
 Given a super smart parking boy, two parking lots and first parking lot has larger available position rate than second parking lot, and a car
 When super smart parking boy parks the car  
 Then the car will be parked to the second parking lot.
 
-[] Case3
+[X] Case3
 Given a smart parking boy, two parking lots and second parking lot has larger available position than first parking lot, and a car
 When smart parking boy parks the car  
 Then the car will be parked to the first parking lot.
