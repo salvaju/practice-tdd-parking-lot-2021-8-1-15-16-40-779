@@ -317,17 +317,17 @@ public class ParkingLotTest {
         parkingLots.add(new ParkingLot());
         parkingLots.add(new ParkingLot());
 
-        SmartParkingBoy parkingboy = new SmartParkingBoy(parkingLots);
-        parkingboy.park(new Car());
+        SmartParkingBoy smartParkingBoy = new SmartParkingBoy(parkingLots);
+        smartParkingBoy.park(new Car());
 
         Car secondCar = new Car();
 
         //when
-        ParkingTicket secondParkingTicket = parkingboy.park(secondCar);
+        ParkingTicket secondParkingTicket = smartParkingBoy.park(secondCar);
 
         //then
-        assertFalse(parkingboy.isParkedOnParkingLotNumber(secondParkingTicket, 1));
-        assertTrue(parkingboy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
+        assertFalse(smartParkingBoy.isParkedOnParkingLotNumber(secondParkingTicket, 1));
+        assertTrue(smartParkingBoy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
     }
 
 }
