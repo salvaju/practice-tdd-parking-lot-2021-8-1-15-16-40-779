@@ -197,6 +197,7 @@ public class ParkingLotTest {
 
         //then
         assertTrue(parkingboy.isParkedOnParkingLotNumber(parkingTicket, 1));
+        assertFalse(parkingboy.isParkedOnParkingLotNumber(parkingTicket, 2));
     }
 
     @Test
@@ -215,6 +216,7 @@ public class ParkingLotTest {
         ParkingTicket secondParkingTicket = parkingboy.park(secondCar);
 
         //then
+        assertFalse(parkingboy.isParkedOnParkingLotNumber(secondParkingTicket, 1));
         assertTrue(parkingboy.isParkedOnParkingLotNumber(secondParkingTicket, 2));
     }
 
