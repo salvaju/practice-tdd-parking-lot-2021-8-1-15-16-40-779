@@ -16,9 +16,7 @@ public class ParkingBoy {
     }
 
     public ParkingTicket park(Car car) {
-
         if (!isParkingLotsNull()) {
-
             return parkingLots.stream()
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
                     .map(parkingLot -> parkingLot.park(car))
@@ -27,7 +25,6 @@ public class ParkingBoy {
         }
 
         return parkingLot.park(car);
-
     }
 
     private boolean isParkingLotsNull() {
@@ -38,7 +35,7 @@ public class ParkingBoy {
         return parkingLot.fetch(parkingTicket);
     }
 
-    public boolean isParkedOnParkingLotNumber(ParkingTicket parkingTicket, int parkingLotCount) {
-        return parkingLots.get(parkingLotCount - 1).isRecognizedParkingTicket(parkingTicket);
+    public boolean isParkedOnParkingLotNumber(ParkingTicket parkingTicket, int parkingLotNumber) {
+        return parkingLots.get(parkingLotNumber - 1).isRecognizedParkingTicket(parkingTicket);
     }
 }
