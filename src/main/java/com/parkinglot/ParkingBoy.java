@@ -17,7 +17,7 @@ public class ParkingBoy {
 
     public ParkingTicket park(Car car) {
 
-        if (parkingLots != null){
+        if (!isParkingLotsNull()){
 
            return parkingLots.stream()
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
@@ -28,6 +28,10 @@ public class ParkingBoy {
 
         return parkingLot.park(car);
 
+    }
+
+    private boolean isParkingLotsNull() {
+        return parkingLots == null;
     }
 
     public Car fetch(ParkingTicket parkingTicket) {
