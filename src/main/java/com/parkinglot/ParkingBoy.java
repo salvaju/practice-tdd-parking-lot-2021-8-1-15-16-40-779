@@ -38,11 +38,7 @@ public class ParkingBoy {
         return parkingLot.fetch(parkingTicket);
     }
 
-    public boolean isParkedOnFirstParkingLot(ParkingTicket parkingTicket) {
-        return parkingLots.get(0).isRecognizedParkingTicket(parkingTicket);
-    }
-
-    public boolean isParkedOnSecondParkingLot(ParkingTicket parkingTicket) {
-        return parkingLots.get(1).isRecognizedParkingTicket(parkingTicket);
+    public boolean isParkedOnParkingLotNumber(ParkingTicket parkingTicket, int parkingLotCount) {
+        return parkingLots.get(parkingLotCount - 1).isRecognizedParkingTicket(parkingTicket);
     }
 }
