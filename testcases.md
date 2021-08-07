@@ -84,7 +84,7 @@ Given a parkingboy, two parking lots with available position and a car
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[] Case2
+[X] Case2
 Given a parkingboy, two parking lots but the first is full, the second is available, and a car
 When Parking boy parks the car  
 Then the car will be parked to the second parking lot.
