@@ -17,7 +17,7 @@ public class SmartParkingBoy extends ParkingBoy {
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
                     .min(Comparator.comparing(parkingLot -> parkingLot.getParkedCars().size()))
                     .map(parkingLot -> parkingLot.park(car))
-                    .orElse(null);
+                    .orElseThrow(NoAvailablePositionException::new);
 
         }
         return getParkingLot().park(car);
