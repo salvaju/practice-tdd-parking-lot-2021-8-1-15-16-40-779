@@ -245,5 +245,20 @@ public class ParkingLotTest {
         assertEquals(guraCar, guraActualCar);
     }
 
+    @Test
+    public void should_throw_exception_message_unrecognized_parking_ticket_when_parking_boy_fetches_the_car_given_a_parking_boy_with_two_parking_lots_and_an_unrecognized_ticket() {
+        //given
+        List<ParkingLot> parkingLots = new ArrayList<>();
+        parkingLots.add(new ParkingLot());
+        parkingLots.add(new ParkingLot());
+
+        ParkingBoy parkingboy = new ParkingBoy(parkingLots);
+        ParkingTicket unrecognizedTicket = new ParkingTicket();
+
+        //when & then
+        Exception exception = assertThrows(Exception.class, () -> parkingboy.fetch(unrecognizedTicket));
+        assertTrue(exception.getMessage().contains("Unrecognized parking ticket"));
+    }
+
 
 }
