@@ -79,7 +79,7 @@ When Parking boy parks the car
 then return error message "No available position"
 
 # story 4
-[] Case1  
+[X] Case1  
 Given a parkingboy, two parking lots with available position and a car
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
