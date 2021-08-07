@@ -17,9 +17,9 @@ public class ParkingBoy {
 
     public ParkingTicket park(Car car) {
 
-        if (!isParkingLotsNull()){
+        if (!isParkingLotsNull()) {
 
-           return parkingLots.stream()
+            return parkingLots.stream()
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
                     .map(parkingLot -> parkingLot.park(car))
                     .findAny()
