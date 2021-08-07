@@ -161,12 +161,12 @@ Given a smart parking boy, two parking lots and second parking lot has larger av
 When smart parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[] Case4
+[X] Case4
 Given a super smart parking boy, two parking lots and an unrecognized ticket
 When super smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[] Case5
+[X] Case5
 Given a super smart parking boy, two parking lots and a used ticket
 When super smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
