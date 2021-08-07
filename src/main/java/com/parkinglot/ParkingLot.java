@@ -46,4 +46,8 @@ public class ParkingLot {
     public boolean isRecognizedParkingTicket(ParkingTicket parkingTicket) {
         return parkedCars.containsKey(parkingTicket);
     }
+
+    public Map<ParkingTicket, Car> getParkedCars() {
+        return parkedCars;
+    }
 }

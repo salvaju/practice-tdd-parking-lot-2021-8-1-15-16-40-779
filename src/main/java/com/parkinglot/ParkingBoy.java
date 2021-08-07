@@ -27,7 +27,7 @@ public class ParkingBoy {
         return parkingLot.park(car);
     }
 
-    private boolean isParkingLotsNull() {
+    public boolean isParkingLotsNull() {
         return parkingLots == null;
     }
 
@@ -45,5 +45,13 @@ public class ParkingBoy {
 
     public boolean isParkedOnParkingLotNumber(ParkingTicket parkingTicket, int parkingLotNumber) {
         return parkingLots.get(parkingLotNumber - 1).isRecognizedParkingTicket(parkingTicket);
+    }
+
+    public ParkingLot getParkingLot() {
+        return parkingLot;
+    }
+
+    public List<ParkingLot> getParkingLots() {
+        return parkingLots;
     }
 }

@@ -115,7 +115,7 @@ Given a smart parking boy, two parking lots with available position, and a car
 When Parking boy parks the car  
 Then the car will be parked to the first parking lot.
 
-[] Case2
+[X] Case2
 Given a smart parking boy, two parking lots and first parking lot has less available position than second parking lot, and a car
 When smart parking boy parks the car  
 Then the car will be parked to the second parking lot.
