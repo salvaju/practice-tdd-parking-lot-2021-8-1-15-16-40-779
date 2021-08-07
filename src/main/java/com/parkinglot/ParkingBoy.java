@@ -18,7 +18,12 @@ public class ParkingBoy {
     public ParkingTicket park(Car car) {
 
         if (parkingLots != null){
-            return parkingLots.get(0).park(car);
+
+            if (parkingLots.get(0).isFullCapacity()){
+                return parkingLots.get(0).park(car);
+            } else {
+                return parkingLots.get(1).park(car);
+            }
         }
 
         return parkingLot.park(car);
@@ -33,7 +38,7 @@ public class ParkingBoy {
         return parkingLots.get(0).isRecognizedParkingTicket(parkingTicket);
     }
 
-    public boolean isParkedOnSecondParkingLot(ParkingTicket secondParkingTicket) {
-        return false;
+    public boolean isParkedOnSecondParkingLot(ParkingTicket parkingTicket) {
+        return parkingLots.get(1).isRecognizedParkingTicket(parkingTicket);
     }
 }
