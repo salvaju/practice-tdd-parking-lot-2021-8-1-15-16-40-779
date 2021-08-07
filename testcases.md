@@ -130,12 +130,12 @@ Given a smart parking boy, two parking lots but both with two parked car and two
 When smart Parking boy fetches the car twice
 Then return the right car with each ticket
 
-[] Case5
+[X] Case5
 Given a smart parking boy, two parking lots and an unrecognized ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
 
-[] Case6
+[X] Case6
 Given a smart parking boy, two parking lots and a used ticket
 When smart Parking boy fetches the car
 Then return no car and error message "Unrecognized parking ticket".
