@@ -13,4 +13,16 @@ public abstract class ParkingBoy {
         return parkingLots == null;
     }
 
+    public Car fetch(ParkingTicket parkingTicket) {
+        if (!isParkingLotsNull()) {
+            return parkingLots.stream()
+                    .filter(parkingLot -> parkingLot.isRecognizedParkingTicket(parkingTicket))
+                    .map(parkingLot -> parkingLot.fetch(parkingTicket))
+                    .findAny()
+                    .orElseThrow(UnrecognizedParkingTicketException::new);
+        }
+
+        return parkingLot.fetch(parkingTicket);
+    }
+
 }
