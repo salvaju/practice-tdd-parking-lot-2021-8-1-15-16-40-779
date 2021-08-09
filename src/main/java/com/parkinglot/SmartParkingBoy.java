@@ -15,11 +15,15 @@ public class SmartParkingBoy extends ParkingBoy {
 
             return getParkingLots().stream()
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
-                    .min(Comparator.comparing(parkingLot -> parkingLot.getParkedCars().size()))
+                    .max(Comparator.comparing(this::getHighestParkingLotSpace))
                     .map(parkingLot -> parkingLot.park(car))
                     .orElseThrow(NoAvailablePositionException::new);
 
         }
         return getParkingLot().park(car);
+    }
+
+    public int getHighestParkingLotSpace(ParkingLot parkingLot){
+        return parkingLot.getCapacity() - parkingLot.getParkedCars().size();
     }
 }
