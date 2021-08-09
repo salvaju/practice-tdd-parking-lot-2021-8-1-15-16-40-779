@@ -9,4 +9,8 @@ public abstract class ParkingBoy {
 
     public abstract ParkingTicket park(Car car);
 
+    public boolean isParkingLotsNull() {
+        return parkingLots == null;
+    }
+
 }
