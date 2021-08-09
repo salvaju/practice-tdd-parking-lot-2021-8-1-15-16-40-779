@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SuperSmartParkingBoyTest {
 
@@ -50,7 +49,6 @@ public class SuperSmartParkingBoyTest {
         superSmartParkingBoy.park(new Car());
 
 
-
         Car secondCar = new Car();
 
         //when
@@ -81,7 +79,6 @@ public class SuperSmartParkingBoyTest {
 
         SuperSmartParkingBoy superSmartParkingBoy = new SuperSmartParkingBoy(parkingLots);
         superSmartParkingBoy.park(new Car());
-
 
 
         Car secondCar = new Car();

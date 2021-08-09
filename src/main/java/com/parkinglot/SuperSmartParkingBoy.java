@@ -10,7 +10,7 @@ public class SuperSmartParkingBoy extends StandardParkingBoy {
     }
 
     private static double getLargerCapacity(ParkingLot parkingLot) {
-        return ((double)  parkingLot.getParkedCars().size() / (double) parkingLot.getCapacity());
+        return ((double) parkingLot.getParkedCars().size() / (double) parkingLot.getCapacity());
     }
 
     @Override
