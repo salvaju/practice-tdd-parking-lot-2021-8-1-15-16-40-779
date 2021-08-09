@@ -29,4 +29,12 @@ public abstract class ParkingBoy {
         return parkingLots.get(parkingLotNumber - 1).isRecognizedParkingTicket(parkingTicket);
     }
 
+    public ParkingLot getParkingLot() {
+        return parkingLot;
+    }
+
+    public List<ParkingLot> getParkingLots() {
+        return parkingLots;
+    }
+
 }
