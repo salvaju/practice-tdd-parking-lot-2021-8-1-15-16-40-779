@@ -7,6 +7,14 @@ public abstract class ParkingBoy {
     private ParkingLot parkingLot;
     private List<ParkingLot> parkingLots;
 
+    public ParkingBoy(ParkingLot parkingLot) {
+        this.parkingLot = parkingLot;
+    }
+
+    public ParkingBoy(List<ParkingLot> parkingLots) {
+        this.parkingLots = parkingLots;
+    }
+
     public abstract ParkingTicket park(Car car);
 
     public boolean isParkingLotsNull() {
