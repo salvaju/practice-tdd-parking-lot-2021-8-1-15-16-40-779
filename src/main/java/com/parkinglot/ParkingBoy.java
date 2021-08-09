@@ -25,4 +25,8 @@ public abstract class ParkingBoy {
         return parkingLot.fetch(parkingTicket);
     }
 
+    public boolean isParkedOnParkingLotNumber(ParkingTicket parkingTicket, int parkingLotNumber) {
+        return parkingLots.get(parkingLotNumber - 1).isRecognizedParkingTicket(parkingTicket);
+    }
+
 }
