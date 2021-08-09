@@ -17,8 +17,8 @@ public class StandardParkingBoy extends ParkingBoy{
         if (!isParkingLotsNull()) {
             return getParkingLots().stream()
                     .filter(parkingLot -> !parkingLot.isFullCapacity())
+                    .findFirst()
                     .map(parkingLot -> parkingLot.park(car))
-                    .findAny()
                     .orElseThrow(NoAvailablePositionException::new);
         }
 
