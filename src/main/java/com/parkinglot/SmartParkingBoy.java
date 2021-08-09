@@ -23,7 +23,7 @@ public class SmartParkingBoy extends ParkingBoy {
         return getParkingLot().park(car);
     }
 
-    public int getHighestParkingLotSpace(ParkingLot parkingLot){
+    public int getHighestParkingLotSpace(ParkingLot parkingLot) {
         return parkingLot.getCapacity() - parkingLot.getParkedCars().size();
     }
 }
