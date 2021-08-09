@@ -2,16 +2,16 @@ package com.parkinglot;
 
 import java.util.List;
 
-public class ParkingBoy {
+public class StandardParkingBoy {
 
     private ParkingLot parkingLot;
     private List<ParkingLot> parkingLots;
 
-    public ParkingBoy(ParkingLot parkingLot) {
+    public StandardParkingBoy(ParkingLot parkingLot) {
         this.parkingLot = parkingLot;
     }
 
-    public ParkingBoy(List<ParkingLot> parkingLots) {
+    public StandardParkingBoy(List<ParkingLot> parkingLots) {
         this.parkingLots = parkingLots;
     }
 
