@@ -7,4 +7,6 @@ public abstract class ParkingBoy {
     private ParkingLot parkingLot;
     private List<ParkingLot> parkingLots;
 
+    public abstract ParkingTicket park(Car car);
+
 }
